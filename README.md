@@ -8,3 +8,4 @@ Potential Ideas to explore
 
 
 ![Uploading image.png…]()
+![Uploading image.png…]()
