@@ -36,6 +36,7 @@
     ]
   },
   "devDependencies": {
-    "ajv": "^8.16.0"
+    "ajv": "^8.16.0",
+    "react-router-dom": "^6.25.1"
   }
 }

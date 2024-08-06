@@ -1,0 +1,41 @@
+
+.header{
+
+    background-color: black;
+    text-align: center;
+    color:white;
+
+}
+
+
+
+.containers{
+
+flex-direction: row;
+align-items: center;
+justify-content: space-between;
+padding: 50px;
+
+
+}
+
+.displayContainer{
+    margin-right: 60%;
+    background-color: grey;
+    padding: 100px;
+
+}
+
+.videoStreamingContainer{
+    margin-left: 80%;
+    padding : 10px;
+    text-align: center;
+    background-color: bisque;
+}
+
+.mapContainer{
+    margin-left :80%;
+    background-color: green;
+    margin-top: 20px;
+    padding : 80px;
+}
