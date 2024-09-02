@@ -78,3 +78,34 @@
 .icon_two {
     background-color: grey;
 }
+
+.iconContainer{
+
+    flex-direction: row;
+    justify-content: center;
+    
+} 
+
+
+
+.icon_one{
+    background-color: red;
+    border-radius: 75px;
+    padding: 20px;
+    width: 100px;
+    height: 100px;
+    align-items: center;
+    
+
+
+}
+
+.icon_two{
+
+   background-color: grey;
+  border-radius: 75px;
+    padding: 20px;
+    width: 100px;
+    height: 100px;
+
+}
