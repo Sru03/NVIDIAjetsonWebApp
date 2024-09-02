@@ -1,41 +1,80 @@
+/* Ensure the entire container takes up the full width and height of the screen */
+.main {
+    display: flex;
+    flex-direction: column;
+    width: 100vw; /* 100% of the viewport width */
+    height: 100vh; /* 100% of the viewport height */
+    overflow: hidden; /* Prevent overflow */
+}
 
-.header{
-
+.header {
     background-color: black;
     text-align: center;
-    color:white;
-
+    color: white;
+    width: 100%; /* Full width */
+    padding: 10px; /* Adjust as needed */
 }
 
-
-
-.containers{
-
-flex-direction: row;
-align-items: center;
-justify-content: space-between;
-padding: 50px;
-
-
+.containers {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    overflow-y: auto; /* Scrollable if content overflows vertically */
 }
 
-.displayContainer{
-    margin-right: 60%;
-    background-color: grey;
-    padding: 100px;
-
-}
-
-.videoStreamingContainer{
-    margin-left: 80%;
-    padding : 10px;
+.displayContainer {
     text-align: center;
-    background-color: bisque;
+    padding: 20px; /* Adjust as needed */
+    max-width: 90%; /* Limit the width to 90% of the screen width */
+    max-height: 50%; /* Limit the height to 50% of the screen height */
+    overflow: hidden; /* Hide overflow */
 }
 
-.mapContainer{
-    margin-left :80%;
-    background-color: green;
-    margin-top: 20px;
-    padding : 80px;
+.subContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+    max-width: 100%; /* Limit width to 100% of the screen width */
+    max-height: 50%; /* Limit height to 50% of the screen height */
+    overflow: hidden; /* Hide overflow */
+    padding: 10px;
+}
+
+.videoStreamingContainer,
+.motionControlContainer {
+    flex: 1;
+    margin: 10px;
+    text-align: center;
+    max-width: 45%; /* Limit each subcontainer width to 45% of the parent width */
+    max-height: 100%; /* Limit each subcontainer height to 100% of the parent height */
+    overflow: hidden; /* Hide overflow */
+}
+
+.iconContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%; /* Full width */
+    max-height: 100px; /* Limit height */
+    padding: 10px;
+}
+
+.icon_one,
+.icon_two {
+    background-color: red;
+    border-radius: 75px;
+    padding: 20px;
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.icon_two {
+    background-color: grey;
 }
