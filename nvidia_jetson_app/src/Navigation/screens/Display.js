@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import display from '../../images/display.png';
 import videostream from '../../images/videostream.png';
 import control from '../../images/control.png';
+import { Canvas } from "@react-three/fiber";
 
 function Display() {
     return (
@@ -15,7 +16,19 @@ function Display() {
             <div className="containers">
                 <div className="displayContainer">
                     <h1>Display Container</h1>
-                    <img src={display} width="700" height="500" alt="Display"/>
+                    {/* <img src={display} width="700" height="500" alt="Display"/> */}
+                    <Canvas>
+                        <directionalLight position = {[0,0,2]}/>
+
+                        <mesh position = {[1,0,0]}> 
+                            <boxGeometry/>
+                            <meshStandardMaterial color={"lightgreen"}/>
+                        </mesh>
+                    </Canvas>
+
+
+
+
                 </div>
 
                 <div className="subContainer">
