@@ -1,56 +1,74 @@
-import React from "react";
-import './Display.css';
+import React, { useState, useRef, Suspense } from "react";
+import '../../Styles/Display.css';
+import { useNavigate } from "react-router-dom";
 import { Link } from 'react-router-dom';
-import display from '../../images/display.png';
-import videostream from '../../images/videostream.png';
-import control from '../../images/control.png';
-import { Canvas } from "@react-three/fiber";
+import { FaDesktop } from "react-icons/fa";
+import { Canvas, useFrame } from "@react-three/fiber";
+import { Box, OrbitControls, useTexture, Text } from '@react-three/drei';
+import Grid from '../../Components/Grid';
+import Controls from '../../Components/Controls';
+import VideoStreaming from "../../Components/VideoStreaming";
+import { ImStatsBars } from "react-icons/im";
+import Test from "./Test";
+import MapPgm from "../../Components/MapPgm";
+
+
+
 
 function Display() {
+
+    const navigate = useNavigate();
+
+    const handleNavigate = () => {
+        navigate("/DataAnalysis")
+    }
+
     return (
         <div className="main">
             <div className="header">
-                <h1>Display</h1>
+                <h1>Log Viewer</h1>
             </div>
 
             <div className="containers">
                 <div className="displayContainer">
-                    <h1>Display Container</h1>
-                    {/* <img src={display} width="700" height="500" alt="Display"/> */}
-                    <Canvas>
-                        <directionalLight position = {[0,0,2]}/>
-
-                        <mesh position = {[1,0,0]}> 
-                            <boxGeometry/>
-                            <meshStandardMaterial color={"lightgreen"}/>
-                        </mesh>
-                    </Canvas>
-
-
-
+                    <h1>Map Log (3D)</h1>
+                    <Test />
 
                 </div>
+
+                <div>
+
+                </div>
+
 
                 <div className="subContainer">
                     <div className="videoStreamingContainer">
-                        <h1>Video Streaming Container</h1>
-                        <img src={videostream} width="300" height="300" alt="Video Stream"/>
+                        <h1>Video Stream</h1>
+
+                        {/* <img src={videostream} width="300" height="300" alt="Video Stream"/> */}
+                        <VideoStreaming />
                     </div>
 
-                    <div className="motionControlContainer">
-                        <h1>Motion Control Container</h1>
-                        <img src={control} width="300" height="300" alt="Motion Control"/>
+                    <div className="PGMImageContainer">
+                        <h1> PGM Lidar Detection </h1>
+                        <MapPgm />
                     </div>
+
                 </div>
 
-                <div className="iconContainer">
-                    <div className="icon_one"><h1>Icon 1</h1></div>
 
-                    <div className="icon_two">
-                        <nav>
-                            <Link to="/DataAnalysis">Icon 2</Link>
-                        </nav>
-                    </div>
+            </div>
+
+
+            <div className="iconContainer">
+                <div className="icon_one">
+                    <FaDesktop className="icon" size={50} color="white" />
+                </div>
+
+                <div className="icon_two">
+                    <ImStatsBars className="icon" size={50} color="white" onClick={handleNavigate} style={{ cursor: 'pointer' }} />
+
+                    
                 </div>
             </div>
         </div>

@@ -6,6 +6,8 @@ import reportWebVitals from './reportWebVitals';
 import { Routes, Route, BrowserRouter } from 'react-router-dom';
 import Display from './Navigation/screens/Display';
 import DataAnalysis from './Navigation/screens/DataAnalysis';
+import Test from './Navigation/screens/Test';
+import Map from './Navigation/screens/Map';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -17,6 +19,8 @@ root.render(
         <Route path="/" element={<App />} />
         <Route path="/Display" element={<Display />} />
         <Route path="/DataAnalysis" element={<DataAnalysis />} />
+        <Route path="/Map" element={<Map/>}/>
+        <Route path="/Test" element={<Test/>}/>
       </Routes>
 
     </BrowserRouter>

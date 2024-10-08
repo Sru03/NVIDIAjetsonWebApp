@@ -1,0 +1,90 @@
+.main{
+    display: flex;
+    flex-direction: column;
+    width: 100vw; /* 100% of the viewport width */
+    height: 100vh; /* 100% of the viewport height */
+    overflow: hidden;
+    
+}
+
+
+.heading {
+    background-color: black;
+    text-align: center;
+    color: white;
+    width: 100%; /* Full width */
+    padding: 10px; /* Adjust as needed */
+}
+
+ 
+
+.DataTable{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding : 20px;
+
+ 
+}
+.Piechart{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding : 20px;
+}
+
+.SubContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 20px;
+    position: relative;
+    overflow-y: auto;  
+
+}
+
+
+table{
+    width: 60%;
+    border: 1px solid rgb(32, 168, 178);
+    background-color: lightblue;
+}
+
+
+table, th,td{
+    border: 1px solid rgb(32, 168, 178);
+    text-align: center;
+    
+}
+
+.iconContainers {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%; /* Full width */
+    max-height: 100px; /* Limit height */
+    padding: 10px;
+}
+
+
+
+.iconOne{
+    background-color: grey;
+   border-radius: 75px;
+    padding: 20px;
+    width: 100px;
+    height: 100px;
+
+
+}
+
+.iconTwo{
+
+    background-color: red;
+    border-radius: 75px;
+    padding: 20px;
+    width: 100px;
+    height: 100px;
+    align-items: center;
+
+}
